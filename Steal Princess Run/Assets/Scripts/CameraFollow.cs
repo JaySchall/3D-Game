@@ -8,7 +8,7 @@ public class CameraFollow : MonoBehaviour
     public float smoothSpeed = 0.125f;
     public float offset = 10;
 
-    void LateUpdate()
+    void FixedUpdate()
     {
         if (target != null)
         {

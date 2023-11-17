@@ -222,6 +222,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 265442393}
   smoothSpeed: 0.125
+  offset: 10
 --- !u!1 &265442389
 GameObject:
   m_ObjectHideFlags: 0
@@ -352,7 +353,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fae22f17fd041446b9f7d1d8e32ec59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingSpeed: 3
+  startingSpeed: 8
+  horizontalSpeed: 8
   laneDistance: 4
 --- !u!1 &596581104
 GameObject:
@@ -446,7 +448,7 @@ Transform:
   m_GameObject: {fileID: 596581104}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 4}
+  m_LocalScale: {x: 1, y: 1, z: 20}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}

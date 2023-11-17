@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    private bool horizontallyMoving = false;
     private bool zero = true;
     public float startingSpeed;
+    public float horizontalSpeed;
     private CharacterController controller;
     private Vector3 direction;
 
@@ -20,7 +22,6 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        direction.z = startingSpeed;
         float horizontalInput = Input.GetAxis("Horizontal");
         //Debug.Log(horizontalInput);
         if (horizontalInput > 0 && zero)
@@ -31,6 +32,7 @@ public class Player : MonoBehaviour
             {
                 lane = 2;
             }
+            horizontallyMoving = true;
             Debug.Log(lane);
         }
         else if (horizontalInput < 0 && zero)
@@ -43,6 +45,7 @@ public class Player : MonoBehaviour
                 lane = 0;
             }
             Debug.Log(lane);
+            horizontallyMoving = true;
         }
         else if (horizontalInput == 0){
             zero = true;
@@ -51,6 +54,25 @@ public class Player : MonoBehaviour
 
     void FixedUpdate()
     {
-        controller.Move(direction * Time.fixedDeltaTime);
+        Vector3 currentPosition = transform.position;
+        Vector3 moveDirection = Vector3.zero;
+
+        if (horizontallyMoving)
+        {
+            Vector3 targetPosition = new Vector3(laneDistance * (lane - 1), currentPosition.y, currentPosition.z);
+            moveDirection = (targetPosition - currentPosition).normalized;
+            moveDirection.x = moveDirection.x * horizontalSpeed;
+
+            if ((targetPosition - currentPosition).sqrMagnitude < 0.01f)
+            {
+                horizontallyMoving = false;
+            }
+        }
+
+        // Apply constant movement along the z-axis
+        moveDirection.z = startingSpeed;
+
+        // Use CharacterController.Move for movement
+        controller.Move(moveDirection * Time.fixedDeltaTime);
     }
 }

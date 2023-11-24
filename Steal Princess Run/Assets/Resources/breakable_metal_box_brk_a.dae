@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <asset>
+    <contributor>
+      <author>Blender User</author>
+      <authoring_tool>Blender 3.1.2 commit date:2022-03-31, commit time:17:40, hash:cc66d1020c3b</authoring_tool>
+    </contributor>
+    <created>2023-07-07T18:16:30</created>
+    <modified>2023-07-07T18:16:30</modified>
+    <unit name="meter" meter="1"/>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_effects>
+    <effect id="Mt_BoxIron_A-effect">
+      <profile_COMMON>
+        <newparam sid="Metal_BoxIron_A_Alb_png-surface">
+          <surface type="2D">
+            <init_from>Metal_BoxIron_A_Alb_png</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="Metal_BoxIron_A_Alb_png-sampler">
+          <sampler2D>
+            <source>Metal_BoxIron_A_Alb_png-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <diffuse>
+              <texture texture="Metal_BoxIron_A_Alb_png-sampler" texcoord="BoxIron_ver4__Mt_BoxIron_A-texcoord"/>
+            </diffuse>
+            <index_of_refraction>
+              <float sid="ior">1.45</float>
+            </index_of_refraction>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+  </library_effects>
+  <library_images>
+    <image id="Metal_BoxIron_A_Alb_png" name="Metal_BoxIron_A_Alb_png">
+      <init_from>Metal_BoxIron_A_Alb.png</init_from>
+    </image>
+  </library_images>
+  <library_materials>
+    <material id="Mt_BoxIron_A-material" name="Mt_BoxIron_A">
+      <instance_effect url="#Mt_BoxIron_A-effect"/>
+    </material>
+  </library_materials>
+  <library_geometries>
+    <geometry id="BoxIron_ver4__Mt_BoxIron_A-mesh" name="BoxIron_ver4__Mt_BoxIron_A">
+      <mesh>
+        <source id="BoxIron_ver4__Mt_BoxIron_A-mesh-positions">
+          <float_array id="BoxIron_ver4__Mt_BoxIron_A-mesh-positions-array" count="156">-0.7412109 0.6845703 0.03179931 -0.190918 0.6352539 0.1154175 -0.7504883 0.5126953 0.07757568 0.628418 -0.0682373 0.1209717 -0.7094727 0.1248169 0.05441284 -0.6064453 -0.06750488 0.003881454 0.4125977 -0.2966309 0.04278564 0.0475769 -0.4047852 -0.0354309 0.7001953 0.2783203 0.1209717 0.7177734 -0.02357482 0.1209717 0.7651367 0.7084961 0.1209717 -0.7412109 0.6845703 0.03179931 -0.7504883 0.5126953 0.07757568 -0.7612305 0.6967773 0.1060181 -0.7504883 0.5126953 0.1517333 -0.7094727 0.1248169 0.1286621 -0.7094727 0.1248169 0.05441284 -0.6064453 -0.06750488 0.07806396 -0.6064453 -0.06750488 0.003881454 -0.7612305 0.6967773 0.1060181 -0.7504883 0.5126953 0.1517333 -0.190918 0.6352539 0.1895751 0.628418 -0.0682373 0.1951904 0.7001953 0.2783203 0.1951904 -0.7094727 0.1248169 0.1286621 0.7651367 0.7084961 0.1951904 0.7177734 -0.02357482 0.1951904 -0.6064453 -0.06750488 0.07806396 0.4125977 -0.2966309 0.1170044 0.0475769 -0.4047852 0.03878784 0.7177734 -0.02357482 0.1209717 0.7177734 -0.02357482 0.1951904 0.628418 -0.0682373 0.1209717 0.628418 -0.0682373 0.1951904 0.4125977 -0.2966309 0.1170044 0.4125977 -0.2966309 0.04278564 0.0475769 -0.4047852 0.03878784 0.0475769 -0.4047852 -0.0354309 -0.6064453 -0.06750488 0.07806396 -0.6064453 -0.06750488 0.003881454 0.7177734 -0.02357482 0.1209717 0.7001953 0.2783203 0.1951904 0.7177734 -0.02357482 0.1951904 0.7001953 0.2783203 0.1209717 0.7651367 0.7084961 0.1209717 0.7651367 0.7084961 0.1951904 -0.7412109 0.6845703 0.03179931 -0.7612305 0.6967773 0.1060181 -0.190918 0.6352539 0.1895751 -0.190918 0.6352539 0.1154175 0.7651367 0.7084961 0.1951904 0.7651367 0.7084961 0.1209717</float_array>
+          <technique_common>
+            <accessor source="#BoxIron_ver4__Mt_BoxIron_A-mesh-positions-array" count="52" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="BoxIron_ver4__Mt_BoxIron_A-mesh-normals">
+          <float_array id="BoxIron_ver4__Mt_BoxIron_A-mesh-normals-array" count="150">0.1220411 -0.2615857 -0.9574335 0.050004 0.01260733 -0.9986695 0.0872094 -0.08164054 -0.9928391 0.03642439 0.07949727 -0.9961695 0.07036697 0.1475209 -0.9865527 0.09227514 0.2953801 -0.9509132 0.09493631 0.2590267 -0.9611932 0.1075212 0.3182777 -0.9418802 0.005353212 -9.7676e-4 -0.9999853 -2.68382e-7 0 -1 0.005877375 -8.87276e-4 -0.9999824 -0.9660413 -0.01653176 -0.2578585 -0.9966419 -0.07543045 -0.03186291 -0.9800223 -0.0267381 -0.1970822 -0.9965289 -0.08324855 0 -0.9611408 -0.2760586 0 -0.9506304 -0.3103255 0 -0.8814842 -0.4722138 0 -0.8814841 -0.4722138 0 -0.1163225 0.2329856 0.9654982 -0.08242189 0.07411164 0.9938381 -0.04749262 -0.05214118 0.9975098 -0.04121667 -0.07246565 0.996519 -0.01861131 -0.003428399 0.999821 -0.07033902 -0.1474805 0.9865608 -0.005941867 8.97021e-4 0.999982 3.35478e-7 0 1 -0.09229499 -0.2956231 0.9508358 -0.09496331 -0.2589937 0.9611994 -0.1075423 -0.3182194 0.9418976 0.4470915 -0.8944883 0 0.4470914 -0.8944884 0 0.6062568 -0.7952691 0 0.5840558 -0.8117136 0 0.555197 -0.8317189 0 0.4900515 -0.8716935 0 -0.07630544 -0.9970845 0 -0.1145676 -0.9934155 0 -0.458343 -0.8887755 0 0.9983093 0.05812752 0 0.9989498 -0.04582053 0 0.9983093 0.05812752 0 0.9989497 -0.04582053 0 0.988796 -0.1492733 0 0.9887961 -0.1492733 0 0.1222952 0.9853898 -0.1185366 0.1249074 0.9838608 -0.1281256 0.003934025 0.9999757 -0.005767107 0.01040536 0.9999459 0 -0.07638496 0.9970784 0</float_array>
+          <technique_common>
+            <accessor source="#BoxIron_ver4__Mt_BoxIron_A-mesh-normals-array" count="50" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="BoxIron_ver4__Mt_BoxIron_A-mesh-map">
+          <float_array id="BoxIron_ver4__Mt_BoxIron_A-mesh-map-array" count="240">0.01886039 0.5043794 0.03012174 0.4058046 0.05044704 0.5056307 0.1572619 0.2624897 0.1195105 0.4996185 0.05044704 0.5056307 0.1572619 0.2624897 0.05044704 0.5056307 0.03012174 0.4058046 0.1195105 0.4996185 0.1572619 0.2624897 0.1554002 0.4825282 0.1987976 0.3022248 0.2188482 0.3682058 0.1554002 0.4825282 0.1987976 0.3022248 0.1554002 0.4825282 0.1572619 0.2624897 0.1572619 0.2624897 0.03012174 0.4058046 0.0959807 0.2486953 0.1572619 0.2624897 0.0959807 0.2486953 0.1495712 0.246498 0.0959807 0.2486953 0.03012174 0.4058046 0.0198065 0.2360302 0.9861751 0.04220712 0.9861751 0.0806604 0.9734794 0.04220712 0.9734794 0.04220712 0.9861751 0.0806604 0.9734794 0.06909388 0.9734794 0.06909388 0.9861751 0.0806604 0.9734794 0.1258278 0.9734794 0.1258278 0.9861751 0.0806604 0.9861751 0.1373638 0.9734794 0.1258278 0.9861751 0.1373638 0.9734794 0.2493057 0.9734794 0.2493057 0.9861751 0.1373638 0.9861751 0.2493057 0.9468978 0.1082491 0.9453719 0.1350139 0.8657185 0.1201514 0.753563 0.2227545 0.742027 0.1744133 0.9453719 0.1350139 0.753563 0.2227545 0.9453719 0.1350139 0.9419843 0.1908933 0.9453719 0.1350139 0.742027 0.1744133 0.8657185 0.1201514 0.8657185 0.1201514 0.742027 0.1744133 0.7311319 0.114536 0.742027 0.1744133 0.753563 0.2227545 0.7408673 0.216895 0.929899 0.2221442 0.7852107 0.2553179 0.753563 0.2227545 0.929899 0.2221442 0.753563 0.2227545 0.9419843 0.1908933 0.7852107 0.2553179 0.929899 0.2221442 0.8375805 0.2706382 0.1438032 0.9875485 0.1438032 0.9754936 0.1551256 0.9875485 0.1551256 0.9875485 0.1438032 0.9754936 0.1551256 0.9754936 0.1551256 0.9875485 0.1551256 0.9754936 0.2010865 0.9759209 0.1551256 0.9875485 0.2010865 0.9759209 0.2010865 0.9879757 0.2010865 0.9879757 0.2010865 0.9759209 0.2620929 0.9757378 0.2010865 0.9879757 0.2620929 0.9757378 0.2620929 0.9877926 0.3679617 0.9765923 0.3679617 0.9886471 0.2620929 0.9757378 0.2620929 0.9757378 0.3679617 0.9886471 0.2620929 0.9877926 0.4296091 1.082949 0.3402203 1.071474 0.4296091 1.071474 0.3402203 1.071474 0.4296091 1.082949 0.3402203 1.082949 0.2128361 1.082949 0.2128361 1.071474 0.3402203 1.071474 0.2128361 1.082949 0.3402203 1.071474 0.3402203 1.082949 0.9439375 0.09765923 0.9468978 0.1082491 0.8657185 0.1201514 0.9439375 0.09765923 0.8657185 0.1201514 0.8659932 0.1097445 0.8659932 0.1097445 0.8657185 0.1201514 0.7311319 0.114536 0.8659932 0.1097445 0.7311319 0.114536 0.7316203 0.1041902</float_array>
+          <technique_common>
+            <accessor source="#BoxIron_ver4__Mt_BoxIron_A-mesh-map-array" count="120" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="BoxIron_ver4__Mt_BoxIron_A-mesh-vertices">
+          <input semantic="POSITION" source="#BoxIron_ver4__Mt_BoxIron_A-mesh-positions"/>
+        </vertices>
+        <triangles material="Mt_BoxIron_A-material" count="40">
+          <input semantic="VERTEX" source="#BoxIron_ver4__Mt_BoxIron_A-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#BoxIron_ver4__Mt_BoxIron_A-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#BoxIron_ver4__Mt_BoxIron_A-mesh-map" offset="2" set="0"/>
+          <p>0 0 0 1 1 1 2 2 2 3 3 3 4 4 4 2 2 5 3 3 6 2 2 7 1 1 8 4 4 9 3 3 10 5 5 11 6 6 12 7 7 13 5 5 14 6 6 15 5 5 16 3 3 17 3 3 18 1 1 19 8 8 20 3 3 21 8 8 22 9 9 23 8 8 24 1 1 25 10 10 26 11 11 27 12 12 28 13 13 29 13 13 30 12 12 31 14 14 32 14 14 33 12 12 34 15 15 35 15 15 36 12 12 37 16 16 38 15 15 39 16 16 40 17 17 41 17 17 42 16 16 43 18 18 44 19 19 45 20 20 46 21 21 47 22 22 48 23 23 49 20 20 50 22 22 51 20 20 52 24 24 53 20 20 54 23 23 55 21 21 56 21 21 57 23 23 58 25 25 59 23 23 60 22 22 61 26 26 62 27 27 63 28 28 64 22 22 65 27 27 66 22 22 67 24 24 68 28 28 69 27 27 70 29 29 71 30 30 72 31 31 73 32 32 74 32 32 75 31 31 76 33 33 77 32 32 78 33 33 79 34 34 80 32 32 81 34 34 82 35 35 83 35 35 84 34 34 85 36 36 86 35 35 87 36 36 88 37 37 89 38 38 90 39 38 91 36 36 92 36 36 93 39 38 94 37 37 95 40 39 96 41 40 97 42 41 98 41 40 99 40 39 100 43 42 101 44 43 102 45 44 103 41 40 104 44 43 105 41 40 106 43 42 107 46 45 108 47 46 109 48 47 110 46 45 111 48 47 112 49 48 113 49 48 114 48 47 115 50 49 116 49 48 117 50 49 118 51 49 119</p>
+        </triangles>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_controllers>
+    <controller id="Armature_BoxIron_ver4__Mt_BoxIron_A-skin" name="Armature">
+      <skin source="#BoxIron_ver4__Mt_BoxIron_A-mesh">
+        <bind_shape_matrix>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</bind_shape_matrix>
+        <source id="Armature_BoxIron_ver4__Mt_BoxIron_A-skin-joints">
+          <Name_array id="Armature_BoxIron_ver4__Mt_BoxIron_A-skin-joints-array" count="1">Root</Name_array>
+          <technique_common>
+            <accessor source="#Armature_BoxIron_ver4__Mt_BoxIron_A-skin-joints-array" count="1" stride="1">
+              <param name="JOINT" type="name"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Armature_BoxIron_ver4__Mt_BoxIron_A-skin-bind_poses">
+          <float_array id="Armature_BoxIron_ver4__Mt_BoxIron_A-skin-bind_poses-array" count="16">1 0 0 0 0 -1.62921e-7 1 0 0 -1 -1.62921e-7 0 0 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#Armature_BoxIron_ver4__Mt_BoxIron_A-skin-bind_poses-array" count="1" stride="16">
+              <param name="TRANSFORM" type="float4x4"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Armature_BoxIron_ver4__Mt_BoxIron_A-skin-weights">
+          <float_array id="Armature_BoxIron_ver4__Mt_BoxIron_A-skin-weights-array" count="52">1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1</float_array>
+          <technique_common>
+            <accessor source="#Armature_BoxIron_ver4__Mt_BoxIron_A-skin-weights-array" count="52" stride="1">
+              <param name="WEIGHT" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <joints>
+          <input semantic="JOINT" source="#Armature_BoxIron_ver4__Mt_BoxIron_A-skin-joints"/>
+          <input semantic="INV_BIND_MATRIX" source="#Armature_BoxIron_ver4__Mt_BoxIron_A-skin-bind_poses"/>
+        </joints>
+        <vertex_weights count="52">
+          <input semantic="JOINT" source="#Armature_BoxIron_ver4__Mt_BoxIron_A-skin-joints" offset="0"/>
+          <input semantic="WEIGHT" source="#Armature_BoxIron_ver4__Mt_BoxIron_A-skin-weights" offset="1"/>
+          <vcount>1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 </vcount>
+          <v>0 0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0 10 0 11 0 12 0 13 0 14 0 15 0 16 0 17 0 18 0 19 0 20 0 21 0 22 0 23 0 24 0 25 0 26 0 27 0 28 0 29 0 30 0 31 0 32 0 33 0 34 0 35 0 36 0 37 0 38 0 39 0 40 0 41 0 42 0 43 0 44 0 45 0 46 0 47 0 48 0 49 0 50 0 51</v>
+        </vertex_weights>
+      </skin>
+    </controller>
+  </library_controllers>
+  <library_visual_scenes>
+    <visual_scene id="Scene" name="Scene">
+      <node id="Armature" name="Armature" type="NODE">
+        <matrix sid="transform">1 0 0 0 0 -1.62921e-7 -1 0 0 1 -1.62921e-7 0 0 0 0 1</matrix>
+        <node id="Armature_Root" name="Root" sid="Root" type="JOINT">
+          <matrix sid="transform">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+          <extra>
+            <technique profile="blender">
+              <layer sid="layer" type="string">0</layer>
+              <tip_x sid="tip_x" type="float">0</tip_x>
+              <tip_y sid="tip_y" type="float">1</tip_y>
+              <tip_z sid="tip_z" type="float">0</tip_z>
+            </technique>
+          </extra>
+        </node>
+        <node id="BoxIron_ver4__Mt_BoxIron_A" name="BoxIron_ver4__Mt_BoxIron_A" type="NODE">
+          <matrix sid="transform">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+          <instance_controller url="#Armature_BoxIron_ver4__Mt_BoxIron_A-skin">
+            <skeleton>#Armature_Root</skeleton>
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="Mt_BoxIron_A-material" target="#Mt_BoxIron_A-material">
+                  <bind_vertex_input semantic="BoxIron_ver4__Mt_BoxIron_A-texcoord" input_semantic="TEXCOORD" input_set="0"/>
+                </instance_material>
+              </technique_common>
+            </bind_material>
+          </instance_controller>
+        </node>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#Scene"/>
+  </scene>
+</COLLADA>

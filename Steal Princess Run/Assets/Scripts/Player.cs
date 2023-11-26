@@ -6,6 +6,9 @@ public class Player : MonoBehaviour
 {
     private bool horizontallyMoving = false;
     private bool zero = true;
+ //   public bool isJumping = false;
+  //  public bool comingDown = false;
+    public GameObject playerObject;
     public float startingSpeed;
     public float horizontalSpeed;
     private CharacterController controller;
@@ -66,12 +69,10 @@ public class Player : MonoBehaviour
             if ((targetPosition - currentPosition).sqrMagnitude < 0.01f)
             {
                 horizontallyMoving = false;
+                
             }
         }
-       /* if (moveDirection != Vector3.zero)
-        {
-            transform.forward = moveDirection;
-        }*/
+      
 
         // Apply constant movement along the z-axis
         moveDirection.z = startingSpeed;

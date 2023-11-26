@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class Enviroment : MonoBehaviour
 {
-    public static float leftSide = -1.5f;
-    public static float rightSide = 1.5f;
+    //controls player changing lanes WITHOUT model turning left or right.
+    public static float leftSide = -1.0f;
+    public static float rightSide = 1.0f;
     public float internalLeft;
     public float internalRight;
 

@@ -423,6 +423,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fae22f17fd041446b9f7d1d8e32ec59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerObject: {fileID: 0}
   startingSpeed: 10
   horizontalSpeed: 10
   laneDistance: 3
@@ -1265,8 +1266,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3798315944867984627}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.13196, y: -1.1600001, z: -0.25}
-  m_LocalScale: {x: 0.008953327, y: 0.008953327, z: 0.008953327}
+  m_LocalPosition: {x: -0.12872, y: -1.11, z: -0.30353}
+  m_LocalScale: {x: 0.010932012, y: 0.010932012, z: 0.010932012}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1453522420078389911}

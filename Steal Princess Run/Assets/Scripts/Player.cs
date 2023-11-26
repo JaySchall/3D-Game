@@ -68,6 +68,10 @@ public class Player : MonoBehaviour
                 horizontallyMoving = false;
             }
         }
+        if (moveDirection != Vector3.zero)
+        {
+            transform.forward = moveDirection;
+        }
 
         // Apply constant movement along the z-axis
         moveDirection.z = startingSpeed;

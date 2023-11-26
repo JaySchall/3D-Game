@@ -305,6 +305,7 @@ GameObject:
   - component: {fileID: 265442390}
   - component: {fileID: 265442395}
   - component: {fileID: 265442394}
+  - component: {fileID: 265442396}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -425,6 +426,26 @@ MonoBehaviour:
   startingSpeed: 10
   horizontalSpeed: 10
   laneDistance: 3
+--- !u!95 &265442396
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 265442389}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 40f55bbd2cfe7b04e989870bc8789191, type: 3}
+  m_Controller: {fileID: 9100000, guid: 75e4adc81f44ac84ca9ff1c4c47938c1, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1053808332
 GameObject:
   m_ObjectHideFlags: 0
@@ -1262,6 +1283,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3196657551814296438}
   - component: {fileID: 2927624376407872807}
+  - component: {fileID: 4706233711951982136}
   m_Layer: 0
   m_Name: Ganondorf
   m_TagString: Untagged
@@ -1269,6 +1291,26 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!95 &4706233711951982136
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4706233711951982135}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4913b70411e5f7147b352de457ccd48c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &4890665111897967883
 GameObject:
   m_ObjectHideFlags: 0
@@ -1309,8 +1351,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1082271958005956169}
   m_LocalRotation: {x: -0.15920506, y: 0.119736195, z: 0.0062010013, w: 0.97993803}
-  m_LocalPosition: {x: 0.7836446, y: 157.83487, z: 1.7350905}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0.7836448, y: 157.83485, z: 1.7350903}
+  m_LocalScale: {x: 1.0000002, y: 1, z: 1.0000002}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2559285841384398400}

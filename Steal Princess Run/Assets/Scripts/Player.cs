@@ -80,4 +80,13 @@ public class Player : MonoBehaviour
         // Use CharacterController.Move for movement
         controller.Move(moveDirection * Time.fixedDeltaTime);
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.tag == "rupee")
+        {
+            Destroy(other.gameObject);
+        }
+        
+    }
 }

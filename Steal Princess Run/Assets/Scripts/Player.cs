@@ -13,6 +13,7 @@ public class Player : MonoBehaviour
     public float horizontalSpeed;
     private CharacterController controller;
     private Vector3 direction;
+    public ScoreManager scoreManager;
 
     private int lane = 1;
     public float laneDistance = 4;
@@ -85,6 +86,7 @@ public class Player : MonoBehaviour
     {
         if(other.gameObject.tag == "rupee")
         {
+            scoreManager.AddScore(100);
             Destroy(other.gameObject);
         }
         

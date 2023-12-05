@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -9,7 +10,8 @@ public class Player : MonoBehaviour
  //   public bool isJumping = false;
   //  public bool comingDown = false;
     public GameObject playerObject;
-    public float startingSpeed;
+    public float startingSpeed = 20;
+    private float speed;
     public float horizontalSpeed;
     private CharacterController controller;
     private Vector3 direction;
@@ -21,6 +23,7 @@ public class Player : MonoBehaviour
     void Start()
     {
         controller = GetComponent<CharacterController>();
+        speed = startingSpeed;
     }
 
     // Update is called once per frame
@@ -37,7 +40,6 @@ public class Player : MonoBehaviour
                 lane = 2;
             }
             horizontallyMoving = true;
-            Debug.Log(lane);
         }
         else if (horizontalInput < 0 && zero)
         {
@@ -48,12 +50,13 @@ public class Player : MonoBehaviour
             {
                 lane = 0;
             }
-            Debug.Log(lane);
             horizontallyMoving = true;
         }
         else if (horizontalInput == 0){
             zero = true;
         }
+
+        
     }
 
     void FixedUpdate()
@@ -73,13 +76,16 @@ public class Player : MonoBehaviour
                 
             }
         }
+
       
 
         // Apply constant movement along the z-axis
-        moveDirection.z = startingSpeed;
+        moveDirection.z = speed;
 
         // Use CharacterController.Move for movement
         controller.Move(moveDirection * Time.fixedDeltaTime);
+
+        speed = Mathf.Floor(1.0f / 96.0f * currentPosition.z) + startingSpeed;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -89,6 +95,10 @@ public class Player : MonoBehaviour
             scoreManager.AddScore(100);
             Destroy(other.gameObject);
         }
-        
+        else if (other.gameObject.tag == "obstacle")
+        {
+            Debug.Log("crash");
+            SceneManager.LoadScene("Menu");
+        }
     }
 }

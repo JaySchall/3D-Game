@@ -96,9 +96,10 @@ GameObject:
   m_Component:
   - component: {fileID: 3634385059434364215}
   - component: {fileID: 1515905888627028751}
+  - component: {fileID: -4255618867910062580}
   m_Layer: 0
   m_Name: BrokenIronBox
-  m_TagString: Untagged
+  m_TagString: obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -128,10 +129,23 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4117483408398100365}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 2, y: 2, z: 2}
+  m_Center: {x: 0, y: 1, z: 0}
+--- !u!65 &-4255618867910062580
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4117483408398100365}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.6, y: 1.6, z: 1.6}
   m_Center: {x: 0, y: 1, z: 0}
 --- !u!1 &6071119431294969827
 GameObject:

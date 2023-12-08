@@ -1525,9 +1525,9 @@ GameObject:
   - component: {fileID: 1619470919}
   - component: {fileID: 1619470918}
   - component: {fileID: 1619470917}
-  - component: {fileID: 1619470916}
   - component: {fileID: 1619470915}
   - component: {fileID: 1619470914}
+  - component: {fileID: 1619470921}
   m_Layer: 0
   m_Name: Player (1)
   m_TagString: Untagged
@@ -1573,23 +1573,6 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1619470916
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1619470913}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3fae22f17fd041446b9f7d1d8e32ec59, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerObject: {fileID: 0}
-  startingSpeed: 20
-  horizontalSpeed: 15
-  scoreManager: {fileID: 1729251966}
-  laneDistance: 3
 --- !u!136 &1619470917
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1598,7 +1581,7 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1619470913}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.4
   m_Height: 2.5
@@ -1670,6 +1653,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1619470921
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1619470913}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ccc41506d72d02c4ebecdbec2f154c2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerObject: {fileID: 0}
+  startingSpeed: 20
+  horizontalSpeed: 15
+  scoreManager: {fileID: 0}
+  laneDistance: 3
 --- !u!1 &1692239717
 GameObject:
   m_ObjectHideFlags: 0

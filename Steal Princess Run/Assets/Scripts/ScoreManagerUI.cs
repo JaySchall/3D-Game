@@ -7,20 +7,24 @@ using TMPro;
 public class ScoreManagerUI : MonoBehaviour
 {
     public TextMeshProUGUI scoreText;
-    public TextMeshProUGUI highscoreText;
+    public TextMeshProUGUI HighScoreText;
     public ScoreManager scoreManager;
-    
+    public ScoreManager highscoreManager;
+
     // Start is called before the first frame update
     void Start()
     {
         scoreText.text = "Score: " + scoreManager.GetScore().ToString();
-      //  highscoreText = "HighScore: " + highscore.GetScore().toString();
+        HighScoreText.text = "HighScore: " + highscoreManager.GetHighScore().ToString();
     }
 
 
     public void UpdateScoreText()
     {
         scoreText.text = "Score: " + scoreManager.GetScore().ToString();
-      //  highscoreText.text = "Highscore: " + scoreManager.GetScore().ToString();
+    }
+    public void UpdateHighScoreText()
+    {
+        HighScoreText.text = "Highscore: " + highscoreManager.GetHighScore().ToString();
     }
 }

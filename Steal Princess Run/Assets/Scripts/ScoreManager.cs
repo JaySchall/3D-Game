@@ -8,27 +8,25 @@ public class ScoreManager : MonoBehaviour
     public ScoreManagerUI highscoreManagerUI;
     int currentScore = 0;
     int highScore = 0;
-    // Start is called before the first frame update
+
     void Start()
     {
-        
+        // Load high score from player preferences or another source.
+        highScore = PlayerPrefs.GetInt("HighScore", 0);
+        highscoreManagerUI.UpdateHighScoreText(); // Update the UI with the loaded high score.
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     public void AddScore(int points)
     {
         currentScore += points;
         scoreManagerUI.UpdateScoreText();
-        if (currentScore >= highScore)
+        if (currentScore > highScore)
         {
             highScore = currentScore;
             highscoreManagerUI.UpdateHighScoreText();
         }
     }
+
     public int GetScore()
     {
         return currentScore;
@@ -42,5 +40,6 @@ public class ScoreManager : MonoBehaviour
     public void ResetScore()
     {
         currentScore = 0;
+        // You may choose to save the high score to player preferences or another source here.
     }
 }

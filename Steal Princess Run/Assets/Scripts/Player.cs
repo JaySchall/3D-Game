@@ -98,7 +98,7 @@ public class Player : MonoBehaviour
         else if (other.gameObject.tag == "obstacle")
         {
             Debug.Log("crash");
-            SceneManager.LoadScene("Menu");
+            SceneManager.LoadScene("Victory");
         }
     }
 }

@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class ScoreManager : MonoBehaviour
 {
     public ScoreManagerUI scoreManagerUI;
@@ -11,15 +11,33 @@ public class ScoreManager : MonoBehaviour
 
     void Start()
     {
+        Scene currentScene = SceneManager.GetActiveScene();
+        if(currentScene.name == "Main")
+        {
+            Debug.Log("Main");
+            currentScore = 0;
+            PlayerPrefs.SetInt("Score", currentScore);
+            PlayerPrefs.Save();
+        }
+        else
+        {
+            Debug.Log(currentScore);
+            currentScore = PlayerPrefs.GetInt("Score", 0);
+        }
         // Load high score from player preferences or another source.
+        
         highScore = PlayerPrefs.GetInt("Highscore", 0);
         highscoreManagerUI.UpdateHighScoreText(); // Update the UI with the loaded high score.
+        scoreManagerUI.UpdateScoreText();
     }
 
     public void AddScore(int points)
     {
         currentScore += points;
+        PlayerPrefs.SetInt("Score", currentScore);
+        PlayerPrefs.Save();
         scoreManagerUI.UpdateScoreText();
+
         if (currentScore > highScore)
         {
             SetHighscore(currentScore);
